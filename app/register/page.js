@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 
 // 'use client';
 function RegisterPage(){
+   
   const [teamId, setTeamId] = useState('');
 
   useEffect(() => {
@@ -19,39 +20,39 @@ function RegisterPage(){
           method="POST"
         className="flex flex-col gap-4 bg-white bg-opacity-60 p-6 rounded-xl w-full max-w-md shadow-lg"
       >
-        <h2 className="text-2xl font-bold text-center">Squad Registration</h2>
+        <h2 className="text-2xl bg-gradient-to-r from-yellow-400 via-emerald-300 to-red-500 bg-clip-text text-transparent font-bold text-center">Squad Registration</h2>
 
         {/* Team Number (Auto) */}
         <input type="hidden" name="Team Number" value={teamId} />
 
         {/* User-entered fields */}
-        <input
+        <input 
           type="text"
           name="Player 1"
           placeholder="Player 1 Username"
           required
-          className="bg-amber-100 px-4 py-2 rounded-md"
+          className="bg-amber-100 text-black font-bold px-4 py-2 rounded-md"
         />
         <input
           type="text"
           name="Player 2"
           placeholder="Player 2 Username"
           required
-          className="bg-amber-100 px-4 py-2 rounded-md"
+          className="bg-amber-100 px-4 text-black font-bold  py-2 rounded-md"
         />
         <input
           type="text"
           name="Player 3"
           placeholder="Player 3 Username"
           required
-          className="bg-amber-100 px-4 py-2 rounded-md"
+          className="bg-amber-100 text-black font-bold  px-4 py-2 rounded-md"
         />
         <input
           type="text"
           name="Player 4"
           placeholder="Player 4 Username"
           required
-          className="bg-amber-100 px-4 py-2 rounded-md"
+          className="bg-amber-100 text-black font-bold  px-4 py-2 rounded-md"
         />
 
 
@@ -59,9 +60,6 @@ function RegisterPage(){
         <button
           type="submit"
           className="mt-4 font-bold transform active:scale-90 p-2 bg-amber-400 hover:bg-blue-300 w-full rounded-3xl"
-          onClick={() => {
-            alert(`Your team ID is: ${teamId}`);
-          }}
         >
           Submit Team
         </button>
